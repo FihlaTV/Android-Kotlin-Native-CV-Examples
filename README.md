@@ -31,8 +31,8 @@ OpenCV version: 3.4.1
     ```
     compileSdkVersion 28
     defaultConfig {
-      minSdkVersion 25
-      targetSdkVersion 28
+        minSdkVersion 25
+        targetSdkVersion 28
     }
     ```
 
@@ -72,7 +72,7 @@ and copy the header files from `YOUR_OPENCV_SDK/sdk/native/jni/include`.
   * After the `cmake_minimum_required`, add
 
     ```
-    include_directories(YOUR_OPENCV_SDK/sdk/native/jni/include)
+    include_directories(src/main/cpp/include)
     add_library( lib_opencv SHARED IMPORTED )
     set_target_properties(lib_opencv PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libopencv_java3.so)
     ```
